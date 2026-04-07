@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: notification-service
-          image: 857874856616.dkr.ecr.ap-south-1.amazonaws.com/notification-service:<IMAGE_TAG>
+          image: 857874856616.dkr.ecr.ap-south-1.amazonaws.com/notification-service:63603d166d177f943f1db596dffbda375819aeff
           envFrom:
             - configMapRef:
                 name: notification-config
