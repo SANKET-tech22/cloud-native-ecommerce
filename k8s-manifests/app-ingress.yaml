@@ -11,9 +11,16 @@ spec:
     - http:
         paths:
           - path: /auth(/|$)(.*)
-            pathType: ImplementationSpecific   # 🔥 FIX HERE
+            pathType: ImplementationSpecific   
             backend:
               service:
                 name: auth-service
                 port:
+                  number: 80
+          - path: /auth(/|$)(.*)
+            pathType: ImplementationSpecific
+            backend:  
+              service:  
+                name: product-service
+                port: 
                   number: 80
