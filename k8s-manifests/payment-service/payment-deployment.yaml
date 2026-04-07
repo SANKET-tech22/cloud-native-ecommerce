@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: payment-service
-          image: 857874856616.dkr.ecr.ap-south-1.amazonaws.com/payment-service:<IMAGE_TAG>
+          image: 857874856616.dkr.ecr.ap-south-1.amazonaws.com/payment-service:ce113fbd2d14afc98cb13761c585849718b7d33f
           envFrom:
             - configMapRef:
                 name: payment-config
