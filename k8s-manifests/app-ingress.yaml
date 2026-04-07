@@ -17,7 +17,8 @@ spec:
                 name: auth-service
                 port:
                   number: 80
-          - path: /auth(/|$)(.*)
+
+          - path: /product(/|$)(.*)
             pathType: ImplementationSpecific
             backend:  
               service:  
