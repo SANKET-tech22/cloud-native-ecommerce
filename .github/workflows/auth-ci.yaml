@@ -6,7 +6,7 @@ on:
       - main
     paths:
       - 'services/auth-service/**'
-      - '.github/workflows/auth-service-ci.yaml'
+      - '.github/workflows/auth-ci.yaml'
 
 jobs:
   build:
