@@ -26,3 +26,11 @@ spec:
                 name: product-service
                 port: 
                   number: 80
+
+          - path: /cart(/|$)(.*)
+            pathType: ImplementationSpecific
+            backend: 
+              service:  
+                name: cart-service
+                port:
+                  number: 80
