@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: payment-config
+  namespace: dev
+data:
+  AWS_REGION: ap-south-1
+  SQS_URL: https://sqs.ap-south-1.amazonaws.com/857874856616/order-queue

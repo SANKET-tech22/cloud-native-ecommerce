@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: payment-service
+  namespace: dev
+spec:
+  replicas: 1   # worker → usually 1
+  selector:
+    matchLabels:
+      app: payment-service
+  template:
+    metadata:
+      labels:
+        app: payment-service
+    spec:
+      containers:
+        - name: payment-service
+          image: 857874856616.dkr.ecr.ap-south-1.amazonaws.com/payment-service:<IMAGE_TAG>
+          envFrom:
+            - configMapRef:
+                name: payment-config
