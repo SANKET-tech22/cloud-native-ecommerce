@@ -35,3 +35,14 @@ const pollMessages = async () => {
 };
 
 pollMessages();
+
+
+const notificationParams = {
+  QueueUrl: process.env.NOTIFICATION_QUEUE_URL,
+  MessageBody: JSON.stringify({
+    type: "PAYMENT_SUCCESS",
+    order,
+  }),
+};
+
+await sqs.sendMessage(notificationParams).promise();
