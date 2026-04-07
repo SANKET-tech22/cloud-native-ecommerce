@@ -8,7 +8,7 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/health", (req, res) => {
-  res.status(200).json({ status: "Auth Service Running" });
+  res.status(200).json({ status: "Auth Service Running v2 🚀" });
 });
 
 const PORT = process.env.PORT || 5000;
