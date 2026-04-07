@@ -38,7 +38,7 @@ spec:
           - path: /order(/|$)(.*)
             pathType: ImplementationSpecific
             backend:
-            service:
-              name: order-service
-              port:
-                number: 80
+              service:
+                name: order-service
+                port:
+                  number: 80
